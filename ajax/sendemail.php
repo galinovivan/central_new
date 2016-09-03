@@ -8,13 +8,14 @@ if($_POST){
 
 	
 	/*Your Website Email*/
-	$your_email = "info@webyzona.com";
+	$your_email = "9225913@gmail.com";
 		
 	/*Form Post*/
 	$name			= $_POST['name'];
 	$email 			= $_POST['email']; 
 	$phone			= $_POST['phone']; 
 	$comments  		= $_POST['comments']; 
+	$photo 			= $_POST['photo1'];
 	
 		
 		/*Check the free space*/
@@ -22,7 +23,7 @@ if($_POST){
 		{
 
 		?>
-        <div class="alert alert-danger heading">All Fields Are Required</div>	
+        <div class="alert alert-danger heading">Заполните все поля</div>	
 		
 		<?php
 		}else{
@@ -35,11 +36,11 @@ if($_POST){
 		$headers[] = "Reply-To: Recipient Name <$your_email>"; // Your site e-mail address
 		$headers[] = "X-Mailer: PHP/".phpversion();
 		
-		mail($your_email, $subject, $comments, implode("\r\n", $headers));							 
+		mail($your_email, $subject, $comments,implode("\r\n", $headers));							 
 						  
 								  
 		?>
-        <div class="alert alert-success heading">Thank you for contacting us.</div>	
+        <div class="alert alert-success heading">Спасибо, мы скоро свяжемся с вами!</div>	
 		
 		<?php
 			}
@@ -47,7 +48,7 @@ if($_POST){
 	
 	}else{
 		?>
-        <div class="alert alert-danger heading">Server Error</div>	
+        <div class="alert alert-danger heading">Ошибка</div>	
 		
 		<?php
 		}

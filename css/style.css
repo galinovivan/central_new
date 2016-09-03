@@ -899,7 +899,7 @@ color: #c10020;
 .common-icon{
 
 	font-size:42px!important;
-	color:#c10020;
+	color:white;
 }
 
 .common h4{
@@ -2796,4 +2796,12 @@ input[type=text]::-ms-clear {
 }
 #startcounting{
 	margin-top: 100px;
+}
+.footer > div p:not(.copy) {
+color: #fff;
+font-size: 20px;
+}
+.navbar-brand h1 {
+font-family: 'Great Vibes', cursive !important;
+margin-top: 7px;
 }
